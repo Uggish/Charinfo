@@ -18,18 +18,20 @@ end)
 end)
  ]]
 
- -- English
+-- English
  QBCore.Commands.Add('jobinfo', 'Character - Job Info!', {}, false, function(source)
   local src = source
   local Player = QBCore.Functions.GetPlayer(src)
-  TriggerClientEvent("QBCore:Notify", source, "Job: "..Player.PlayerData.job.name..", ".."Job Level: "..Player.PlayerData.job.grade.level..", ".."Job Grade Name: "..Player.PlayerData.job.grade.name)
+  TriggerClientEvent("QBCore:Notify", source, "Job: "..Player.PlayerData.job.name..", ".."Job Level: "..Player.PlayerData.job.grade.level..", ".."Job Grade Name: "..Player.PlayerData.job.grade.name.." ".."Payment: "..Player.PlayerData.job.payment)
+  Citizen.Wait(5000)
 end)
 
 
 -- Swedish
---[[ QBCore.Commands.Add('jobinfo', 'Character - Job Info!', {}, false, function(source)
+--[[  QBCore.Commands.Add('jobinfo', 'Character - Job Info!', {}, false, function(source)
   local src = source
   local Player = QBCore.Functions.GetPlayer(src)
-  TriggerClientEvent("QBCore:Notify", source, "Jobb: "..Player.PlayerData.job.name..", ".."Jobb Level: "..Player.PlayerData.job.grade.level..", ".."Jobb Grad Namn: "..Player.PlayerData.job.grade.name)
+  TriggerClientEvent("QBCore:Notify", source, "Jobb: "..Player.PlayerData.job.name..", ".."Jobb Level: "..Player.PlayerData.job.grade.level..", ".."Jobb Grad Namn: "..Player.PlayerData.job.grade.name.." ".."Lön: "..Player.PlayerData.job.payment)
+  Citizen.Wait(5000)
 end)
  ]]
