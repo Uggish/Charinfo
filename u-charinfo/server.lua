@@ -35,3 +35,20 @@ end)
   Citizen.Wait(5000)
 end)
  ]]
+
+-- English
+  QBCore.Commands.Add("charinfo", "Character info!", {}, false, function(source)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    TriggerClientEvent('QBCore:Notify', source, "Firstname: "..Player.PlayerData.charinfo.firstname..", ".."Lastname: "..Player.PlayerData.charinfo.lastname.." ")
+    Citizen.Wait(5000)
+end) 
+
+--[[ -- Swedish
+  QBCore.Commands.Add("firtlastnamechar", "Character info!", {}, false, function(source)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    TriggerClientEvent('QBCore:Notify', source, "Förnamn: "..Player.PlayerData.charinfo.firstname..", ".."Efternamn: "..Player.PlayerData.charinfo.lastname.." ")
+    Citizen.Wait(5000)
+end) 
+]]
